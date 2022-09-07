@@ -2,7 +2,7 @@ import glob
 from os.path import basename, dirname, isfile
 
 from config import *
-from Gladert *
+from Glade import *
 from Glade.helpers import *
 from Glade.helpers.SQL import *
 from Glade.resources import *
