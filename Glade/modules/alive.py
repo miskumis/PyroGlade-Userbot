@@ -11,11 +11,12 @@ import asyncio
 import os
 import time
 from platform import python_version
+import Glade
 
 from pyrogram import Client
 from pyrogram import __version__ as versipyro
 from pyrogram import filters
-from pyrogram.types import Message
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from telegraph import exceptions, upload_file
 
 from config import BOT_VER, CHANNEL
@@ -48,13 +49,14 @@ async def alive(client: Client, message: Message):
     Glade = (
         f"**[PyroGlade-Userbot](https://github.com/miskumis/PyroGlade-Userbot) is Up and Running.**\n\n"
         f"<b>{alive_text}</b>\n\n"
-        f"{emoji} <b>Master :</b> {client.me.mention} \n"
+        f"{emoji} <b>Owner:</b> {client.me.mention} \n"
         f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Bot Version :</b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Python Version :</b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Bot Uptime :</b> <code>{uptime}</code> \n\n"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id})**"
+        f"{emoji} <b>PyroGlade :</b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>Python :</b> <code>{python_version()}</code> \n"
+        f"{emoji} <b>Pyrogram :</b> <code>{versipyro}</code> \n"
+        f"{emoji} <b>Uptime :</b> <code>{uptime}</code> \n\n"
+        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})**      |     **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})**\n"
+        
     )
     try:
         await asyncio.gather(
@@ -64,6 +66,15 @@ async def alive(client: Client, message: Message):
                 alive_logo,
                 caption=Glade,
                 reply_to_message_id=ReplyCheck(message),
+                reply_markup=InlineKeyboardMarkup(
+                [[
+                    InlineKeyboardButton(
+                        "• 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/Superior_Bots")
+                ], [
+                    InlineKeyboardButton(
+                        "• 𝐑𝐞𝐩𝐨 •", url="https://github.com/miskumis/Glade-Userbot")
+                ]],
+        ),
             ),
         )
     except BaseException:
@@ -149,7 +160,7 @@ async def setemoji(client: Client, message: Message):
         != 1
         else None
     )
-    Man = await edit_or_reply(message, "`Processing...`")
+    Glade = await edit_or_reply(message, "`Processing...`")
     if not emoji:
         return await edit_or_reply(message, "**Berikan Sebuah Emoji**")
     sql.addgvar("ALIVE_EMOJI", emoji)
