@@ -3,7 +3,7 @@
 #
 # This file is part of < https://github.com/miskumis/PyroGlade-Userbot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/miskumis/PyroGlade-Userbot/blob/master/LICENSE >
+# Please see < https://github.com/miskumis/PyroGlade-Userbot/blob/main/LICENSE >
 #
 # All rights reserved.
 
@@ -20,7 +20,7 @@ class First:
 ✣ **Channel Glade :** [Glade](t.me/Gladesupportchannel)
 ✣ **Owner Repo :** [miss](t.me/KUMiSCooLLL)
 ✣ **Repo :** [PyroGlade-Userbot](https://github.com/miskumis/PyroGlade-Userbot)"""
-    CREATOR = 'I was created by my master <a href="https://github.com/miskumis/PyroGlade-Userbot">Glade</a> on a rainy day.'
+    CREATOR = 'I was created by my main <a href="https://github.com/miskumis/PyroGlade-Userbot">Glade</a> on a rainy day.'
     MSG_ON = """
  **PyroGlade-Userbot Berhasil Di Aktifkan**
 ━━
