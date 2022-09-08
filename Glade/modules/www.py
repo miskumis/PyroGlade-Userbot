@@ -77,9 +77,9 @@ async def pingme(client: Client, message: Message):
     await xx.edit("=🦖=====")
     await xx.edit("🦖======")
     end = datetime.now()
-    duration = (end - start).microseconds / 1000
+    duration = (end - start).microseconds / 2000
     await xx.edit(
-        f"**PONG!! - ** `%sms`\n"
+        f"**PONG!! ** - `%sms`\n"
         f"**Uptime - ** `{uptime}` \n"
     )
 
@@ -96,9 +96,9 @@ async def kping(client: Client, message: Message):
     await xx.edit("=🐒=====")
     await xx.edit("🐒======")
     end = datetime.now()
-    duration = (end - start).microseconds / 1000
+    duration = (end - start).microseconds / 2000
     await xx.edit(
-        f"**PONG!! - ** `%sms`\n"
+        f"**PONG!! ** -  `%sms`\n"
         f"**Uptime - ** `{uptime}` \n"
     )
 
