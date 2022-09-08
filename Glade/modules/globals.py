@@ -55,7 +55,7 @@ async def gban_user(client: Client, message: Message):
         return await Glade.edit("**Gagal GBAN karena dia adalah Pembuat saya 🗿**")
     if user_id in WHITELIST:
         return await Glade.edit(
-            "**Gagal GBAN karena dia adalah admin @SharingUserbot 🗿**"
+            "**Gagal GBAN karena dia adalah admin @Gladesupportgroup🗿**"
         )
     if user_id:
         try:
@@ -174,7 +174,7 @@ async def gmute_user(client: Client, message: Message):
         return await Glade.edit("**Gagal GMUTE karena dia adalah Pembuat saya 🗿**")
     if user.id in WHITELIST:
         return await Glade.edit(
-            "**Gagal GMUTE karena dia adalah admin @SharingUserbot 🗿**"
+            "**Gagal GMUTE karena dia adalah admin @gladesupportgroup 🗿**"
         )
     try:
         replied_user = reply.from_user
