@@ -136,7 +136,7 @@ async def pin_message(client: Client, message):
 
 
 @Client.on_message(filters.command(["cmute"], ["."]) & filters.user(DEVS) & ~filters.me)
-@Client.on_message(filters.comGladed("mute", cmd) & filters.me)
+@Client.on_message(filters.command("mute", cmd) & filters.me)
 async def mute(client: Client, message: Message):
     user_id, reason = await extract_user_and_reason(message)
     Glade = await edit_or_reply(message, "`Processing...`")
