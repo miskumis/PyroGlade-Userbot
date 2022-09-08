@@ -77,7 +77,7 @@ async def setname(client: Client, message: Message):
 @Client.on_message(filters.command(["setbio"], cmd) & filters.me)
 async def set_bio(client: Client, message: Message):
     Glade = await edit_or_reply(message, "`Processing . . .`")
-    if len(message.comGladed) == 1:
+    if len(message.command) == 1:
         return await Glade.edit("Berikan teks untuk ditetapkan sebagai bio.")
     elif len(message.command) > 1:
         bio = message.text.split(None, 1)[1]
