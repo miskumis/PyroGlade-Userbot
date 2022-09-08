@@ -52,8 +52,8 @@ async def alive(client: Client, message: Message):
         f"{emoji} <b>Bot :</b> <code>{BOT_VER}</code> \n"
         f"{emoji} <b>Python:</b> <code>{python_version()}</code> \n"
         f"{emoji} <b>Pyrogram:</b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Uptime :</b> <code>{uptime}</code> \n\n"
-        f"{emoji} <b>Owner :</b> {client.me.mention} \n"
+        f"{emoji} <b>Uptime :</b> <code>{uptime}</code> \n"
+        f"{emoji} <b>Owner :</b> {client.me.mention} \n\n"
         f"               **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})**"
     )
     try:
