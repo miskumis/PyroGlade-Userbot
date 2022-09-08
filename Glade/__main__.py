@@ -33,7 +33,7 @@ async def main():
         try:
             await bot.start()
             bot.me = await bot.get_me()
-            await bot.join_chat("Gladesupportchanel")
+            await bot.join_chat("Gladesupportchannel")
             await bot.join_chat("Gladesupportgroup")
             try:
                 await bot.send_message(

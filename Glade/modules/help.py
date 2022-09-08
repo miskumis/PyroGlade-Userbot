@@ -3,7 +3,7 @@
 #
 # This file is part of < https://github.com/miskumis/PyroGlade-Userbot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/miskumis/PyroGlade-Userbot/blob/main/LICENSE >
+# Please see < https://github.com/miskumis/PyroGlade-Userbot/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -33,7 +33,7 @@ async def module_help(client: Client, message: Message):
         for x in split_list(sorted(CMD_HELP.keys()), 2):
             ac.add_row([x[0], x[1] if len(x) >= 2 else None])
         await edit_or_reply(
-            message, f"```{str(ac)}```\n•[support](t.me/Gladesupportgroup) x [group](t.me/Gladesupporchannel)•"
+            message, f"```{str(ac)}```\n• @Lunatic0de × @SharingUserbot •"
         )
         await message.reply(
             f"**Contoh Ketik** `{CMD_HANDLER}help afk` **Untuk Melihat Informasi Module**"
