@@ -42,13 +42,12 @@ alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey,                           
 
 @Client.on_message(filters.command(["alive", "awake"], cmd) & filters.me)
 async def alive(client: Client, message: Message):
-    xx = await edit_or_reply(message, "prosess. . .")
+    xx = await edit_or_reply(message, "prosses. . .")
     await asyncio.sleep(2)
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     Glade = (
         f"**[PyroGlade-Userbot](https://github.com/miskumis/PyroGlade-Userbot) is Up and Running.**\n\n"
-        f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n"
         f"<b>{alive_text}</b>\n\n"
         f"{emoji} <b>Owner:</b> {client.me.mention} \n"
         f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
@@ -56,7 +55,6 @@ async def alive(client: Client, message: Message):
         f"{emoji} <b>Python :</b> <code>{python_version()}</code> \n"
         f"{emoji} <b>Pyrogram :</b> <code>{versipyro}</code> \n"
         f"{emoji} <b>Uptime :</b> <code>{uptime}</code> \n"
-        f"◈ ━━━━━━ ◆ ━━━━━━ ◈ \n\n"
         f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})**      |     **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})**\n"
         
     )
