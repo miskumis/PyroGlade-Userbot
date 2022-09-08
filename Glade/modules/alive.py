@@ -3,7 +3,7 @@
 #
 # This file is part of < https://github.com/miskumis/PyroGlade-Userbot > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/miskumis/PyroGlade-Userbot/blob/main/LICENSE >
+# Please see < https://github.com/miskumis/PyroGlade-Userbot/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -11,7 +11,6 @@ import asyncio
 import os
 import time
 from platform import python_version
-import Glade
 
 from pyrogram import Client
 from pyrogram import __version__ as versipyro
@@ -36,27 +35,26 @@ modules = CMD_HELP
 alive_logo = (
     gvarstatus("ALIVE_LOGO") or "https://telegra.ph/file/a40e5de294e54b59463ff.jpg"
 )
-emoji = gvarstatus("ALIVE_EMOJI") or "➦"
-alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   alive."
+emoji = gvarstatus("ALIVE_EMOJI") or "⚡️"
+alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey, I am alive."
 
 
 @Client.on_message(filters.command(["alive", "awake"], cmd) & filters.me)
 async def alive(client: Client, message: Message):
-    xx = await edit_or_reply(message, "prosses. . .")
+    xx = await edit_or_reply(message, "⚡️")
     await asyncio.sleep(2)
     send = client.send_video if alive_logo.endswith(".mp4") else client.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     Glade = (
         f"**[PyroGlade-Userbot](https://github.com/miskumis/PyroGlade-Userbot) is Up and Running.**\n\n"
         f"<b>{alive_text}</b>\n\n"
-        f"{emoji} <b>Owner:</b> {client.me.mention} \n"
+        f"{emoji} <b>Master :</b> {client.me.mention} \n"
         f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>PyroGlade :</b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Python :</b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pyrogram :</b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Uptime :</b> <code>{uptime}</code> \n"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})**      |     **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})**\n"
-        
+        f"{emoji} <b>Bot Version :</b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>Python Version :</b> <code>{python_version()}</code> \n"
+        f"{emoji} <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
+        f"{emoji} <b>Bot Uptime :</b> <code>{uptime}</code> \n\n"
+        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id})**"
     )
     try:
         await asyncio.gather(
@@ -151,7 +149,7 @@ async def setemoji(client: Client, message: Message):
         != 1
         else None
     )
-    Glade = await edit_or_reply(message, "`Processing...`")
+    Man = await edit_or_reply(message, "`Processing...`")
     if not emoji:
         return await edit_or_reply(message, "**Berikan Sebuah Emoji**")
     sql.addgvar("ALIVE_EMOJI", emoji)
