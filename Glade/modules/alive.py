@@ -50,11 +50,11 @@ async def alive(client: Client, message: Message):
         f"<b>{alive_text}</b>\n\n"
         f"{emoji} <b>Master :</b> {client.me.mention} \n"
         f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Bot Version :</b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Python Version :</b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
+        f"{emoji} <b>Bot :</b> <code>{BOT_VER}</code> \n"
+        f"{emoji} <b>Python:</b> <code>{python_version()}</code> \n"
+        f"{emoji} <b>Pyrogram:</b> <code>{versipyro}</code> \n"
         f"{emoji} <b>Bot Uptime :</b> <code>{uptime}</code> \n\n"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id})**"
+        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})**"
     )
     try:
         await asyncio.gather(
