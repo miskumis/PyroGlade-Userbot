@@ -1,5 +1,5 @@
 try:
-    from Gladeers.SQL import BASE, SESSION
+    from Glade.helpers.SQL import BASE, SESSION
 except ImportError:
     raise AttributeError
 
