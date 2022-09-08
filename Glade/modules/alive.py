@@ -16,7 +16,7 @@ import Glade
 from pyrogram import Client
 from pyrogram import __version__ as versipyro
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import Message
 from telegraph import exceptions, upload_file
 
 from config import BOT_VER, CHANNEL
@@ -37,7 +37,7 @@ alive_logo = (
     gvarstatus("ALIVE_LOGO") or "https://telegra.ph/file/a40e5de294e54b59463ff.jpg"
 )
 emoji = gvarstatus("ALIVE_EMOJI") or "⚡️"
-alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey, I am alive."
+alive_text = gvarstatus("ALIVE_TEKS_CUSTOM") or "Hey, PyroGlade-Userbot](https://github.com/miskumis/PyroGlade-Userbot) alive."
 
 
 @Client.on_message(filters.command(["alive", "awake"], cmd) & filters.me)
@@ -66,15 +66,6 @@ async def alive(client: Client, message: Message):
                 alive_logo,
                 caption=Glade,
                 reply_to_message_id=ReplyCheck(message),
-                reply_markup=InlineKeyboardMarkup(
-                [[
-                    InlineKeyboardButton(
-                        "• 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 •", url="https://t.me/Superior_Bots")
-                ], [
-                    InlineKeyboardButton(
-                        "• 𝐑𝐞𝐩𝐨 •", url="https://github.com/miskumis/Glade-Userbot")
-                ]],
-        ),
             ),
         )
     except BaseException:
